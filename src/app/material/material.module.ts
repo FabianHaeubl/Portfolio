@@ -45,6 +45,9 @@ import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
 
 @NgModule({
+  imports:[
+      MatIconModule
+  ],
   exports: [
     A11yModule,
     CdkAccordionModule,

@@ -1,0 +1,156 @@
+#main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height:100vh;
+  width:100vw;
+  background-color: #333333;
+  color: white;
+  background: radial-gradient(circle farthest-corner at 50% -100%, rgb(0, 0, 0, 1) 0%, #333333 100%);
+}
+
+#main-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-around;
+  height:100vh;
+  width:100%;
+}
+
+h1{
+  font-size: 75px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2{
+  font-size: 30px;
+}
+
+.card{
+  width: min(80vh, 30vw);
+  height: min(80vh, 30vw);
+  background-color: #666666;
+}
+
+#headline{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-arrows-button{
+  height:5vw;
+  width: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-arrows{
+  height:100vh;
+  width: 10vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+mat-icon{
+  font-size: 5vw;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.lines-position{
+  transform: translate(0, -50%);
+  position:absolute;
+  top:50%;
+  left:50%;
+  //z-index:-100;
+  //background-color: grey;
+  width: 50vw;
+  height: 0.75vw;
+  //border-radius: 10px;
+}
+
+.lines{
+  border-radius: 10vw;
+}
+
+.line1{
+  width: 33vw;
+  height: 100%;
+}
+
+.line2{
+  width: 5vw;
+  height: 100%;
+  position:absolute;
+  left: 34vw;
+  top: 0;
+}
+
+.line3{
+  width: 0.75vw;
+  height: 100%;
+  position:absolute;
+  left: 40vw;
+  top: 0;
+}
+
+.line4{
+  width: 2.5vw;
+  height: 100%;
+  position:absolute;
+  left: 42vw;
+  top: 0;
+}
+#timeline-container{
+  position:relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline {
+  background-color:  #4d4d4d;
+}
+
+.timeline-position{
+  width:100%;
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline-button{
+  border-radius: 100%;
+  height: 5vw;
+  width: 5vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color:white;
+}
+
+.timeline-button-arrow{
+  font-size: 60px;
+  width: auto;
+  height: auto;
+  padding-left: 1vw;
+}
+
+.timeline-button-text{
+  //font-size: 24px;
+}

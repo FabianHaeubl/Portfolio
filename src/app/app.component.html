@@ -1,10 +1,41 @@
-<div>
-  <h1>Portfolio</h1>
-  <h2>Fabian Häubl</h2>
+<div id="main">
+  <div class="nav-arrows">
+    <!--<button class="nav-arrows-button"mat-icon-button><mat-icon color="black">keyboard_arrow_left</mat-icon></button>-->
+  </div>
+  <div id="main-content">
+    <div class="card">
+      <div class="card-front">
+        <div id="headline" >
+          <h1>PORTFOLIO</h1>
+          <h2>Häubl Fabian</h2>
+        </div>
+      </div>
+    </div>
 
-  <!-- Side Navigation on the site (scrollTo) -->
-  <div id="sidenav"></div>
-  <mat-card>
 
-  </mat-card>
+
+    <!-- Side Navigation on the site (scrollTo) -->
+    <!--<div id="sidenav"></div>
+
+    <app-content></app-content>-->
+    <div id="timeline-container">
+      <div class="lines-position">
+        <div class="line1 lines timeline"></div>
+        <div class="line2 lines timeline"></div>
+        <div class="line3 lines timeline"></div>
+        <div class="line4 lines timeline"></div>
+      </div>
+      <div class="timeline-position">
+        <button mat-raised-button class="timeline-button timeline">
+          <span class="timeline-button-text">START</span><mat-icon class="timeline-button-arrow">keyboard_arrow_right</mat-icon></button>
+      </div>
+
+    </div>
+  </div>
+  <div class="nav-arrows">
+
+    <button class="nav-arrows-button"mat-icon-button><mat-icon color="black">keyboard_arrow_right</mat-icon></button>
+  </div>
 </div>
+
+
