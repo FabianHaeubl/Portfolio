@@ -17,33 +17,10 @@
   justify-content:space-around;
   height:100vh;
   width:100%;
+  transition: opacity 1s;
 }
 
-h1{
-  font-size: 75px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-h2{
-  font-size: 30px;
-}
-
-.card{
-  width: min(80vh, 30vw);
-  height: min(80vh, 30vw);
-  background-color: #666666;
-}
-
-#headline{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
 .nav-arrows-button{
   height:5vw;
@@ -67,8 +44,6 @@ mat-icon{
   width: 100%;
   height: 100%;
 }
-
-
 
 .lines-position{
   transform: translate(0, -50%);
