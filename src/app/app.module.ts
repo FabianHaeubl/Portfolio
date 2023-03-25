@@ -7,12 +7,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { ContentComponent } from './content/content.component';
 import { CardComponent } from './card/card.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContentComponent,
-    CardComponent
+    CardComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,

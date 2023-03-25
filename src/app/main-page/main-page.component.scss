@@ -1,0 +1,107 @@
+.start-page .left{
+  background-image: radial-gradient(circle farthest-corner at 100% 80%, rgba(0,0,0,0) 30%, rgba(0,0,0,1) 60%);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 1;
+}
+
+*{
+  color:white;
+}
+
+.content{
+  overflow: hidden;
+}
+
+.pictures{
+  width: 210vw;
+  height: 100vh;
+  position: absolute;
+  top:0;
+  left: -70vw;
+}
+
+.gallery-scroll-hitbox{
+  width:70vw;
+  height: 100vh;
+  position: absolute;
+  top:0;
+  right: 0;
+  z-index: 2;
+}
+.gallery{
+  width:70vw;
+  height: 100vh;
+  //background-image: url("../../assets/pictures/Trilobit_Base_Final.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position:absolute;
+  top:0;
+  right:0;
+  z-index:0;
+  overflow: hidden;
+}
+.pics{
+  width: 70vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position:absolute;
+  top: 0;
+}
+
+.left-pic{
+  left: 0vw;
+  background-color: red;
+}
+.middle-pic{
+  left: 70vw;
+  background-color: blue;
+}
+.right-pic{
+  right: 0vw;
+  background-color:green;
+}
+
+.scroll{
+  position: absolute;
+  bottom:0;
+  right:0;
+  width: 80%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-points{
+  width: 30%;
+  height: 60%;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.outer-scroll-point{
+  background-color: grey;
+  height: .6vw;
+  width: .6vw;
+  opacity: 0.5;
+  border-radius: 100vw;
+}
+
+.scroll-point{
+  background-color: grey;
+  height: .8vw;
+  width: .8vw;
+  opacity: 0.8;
+  border-radius: 100vw;
+}
+.highlighted-scroll-point{
+  background-color: grey;
+  height: 1vw;
+  width: 1vw;
+  border-radius: 100vw;
+}

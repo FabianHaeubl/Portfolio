@@ -1,0 +1,25 @@
+<div class="content">
+  <div class="start-page">
+    <div class="gallery-scroll-hitbox" (wheel)="galleryScroll($event, pictures)"></div>
+    <div class="gallery">
+      <div class="pictures" #pictures [@scroll]='scrollLeft ? "left" : scrollRight ? "right" : "middle"' (@scroll.done)="this.resetBool()">
+        <div class="pics left-pic"></div>
+        <div class="pics middle-pic"></div>
+        <div class="pics right-pic"></div>
+      </div>
+      <div class="scroll">
+        <div class="scroll-points">
+          <div class="outer-scroll-point"></div>
+          <div class="scroll-point"></div>
+          <div class="highlighted-scroll-point"></div>
+          <div class="scroll-point"></div>
+          <div class="outer-scroll-point"></div>
+        </div>
+      </div>
+    </div>
+    <div class="left">
+      <h1>Portfolio</h1>
+      <h2>Fabian Häubl</h2>
+    </div>
+  </div>
+</div>
