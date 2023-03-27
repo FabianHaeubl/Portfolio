@@ -1,11 +1,17 @@
 <div class="content">
   <div class="start-page">
-    <div class="gallery-scroll-hitbox" (wheel)="galleryScroll($event, pictures)"></div>
+    <div class="gallery-scroll-hitbox" (wheel)="galleryScroll($event)"></div>
     <div class="gallery">
       <div class="pictures" #pictures [@scroll]='scrollLeft ? "left" : scrollRight ? "right" : "middle"' (@scroll.done)="this.resetBool()">
-        <div class="pics left-pic"></div>
-        <div class="pics middle-pic"></div>
-        <div class="pics right-pic"></div>
+        <video class="pics left-pic" autoplay muted loop [style.background-image]="'url(' + this.leftUrl + ')'">
+          <source [src]="this.leftVideoUrl" type="video/mp4">
+        </video>
+        <video class="pics middle-pic" autoplay muted loop [style.background-image]="'url(' + this.middleUrl + ')'">
+          <source [src]="this.middleVideoUrl" type="video/mp4">
+        </video>
+        <video class="pics right-pic" autoplay muted loop [style.background-image]="'url(' + this.rightUrl + ')'">
+          <source [src]="this.rightVideoUrl" type="video/mp4">
+        </video>
       </div>
       <div class="scroll">
         <div class="scroll-points">
