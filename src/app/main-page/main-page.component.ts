@@ -51,15 +51,18 @@ export class MainPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.backgrounds = [
-      {url: "Trilobit_Base_Final.jpg", type: "jpg"},
-      {url: "Logo GAIA.jpg", type: "jpg"},
-      {url: "Slideshow.mp4", type: "mp4"},
-      {url: "earth1.jpg", type: "jpg"} ];
+      {url: "Trilobit_Base_Final.jpg", type: "image"},
+      {url: "LogoGAIA.jpg", type: "image"},
+      {url: "Slideshow_converted.mp4", type: "video"},
+      {url: "earth1.png", type: "image"} ];
     this.changeBackgrounds();
   }
 
   galleryScroll(event: any): void{
-    console.log(event.deltaY);
+    if(this.scrollRight || this.scrollLeft)
+      return;
+
+      console.log("scroll event");
     if(event.deltaX > 0 || event.deltaY < 0){
       //left to right
       this.scrollRight = true;
@@ -107,22 +110,32 @@ export class MainPageComponent implements OnInit {
 
 
   changeBackgrounds(){
+
     let leftSrc: BackgroundSource = this.backgrounds[this.GetBackgroundsIterator(this.backgroundsIterator - 1)];
     let middleSrc: BackgroundSource = this.backgrounds[this.backgroundsIterator];
     let rightSrc: BackgroundSource = this.backgrounds[this.GetBackgroundsIterator(this.backgroundsIterator + 1)];
-    if(leftSrc.type == 'jpg')
+    if(leftSrc.type == 'image'){
       this.leftUrl = BackgroundSource.BackgroundSourcesPath + leftSrc.url;
-    else
+      this.leftVideoUrl = undefined;
+    } else{
       this.leftVideoUrl = BackgroundSource.BackgroundSourcesPath + leftSrc.url;
+      this.leftUrl = undefined;
+    }
 
-    if(middleSrc.type == 'jpg')
+    if(middleSrc.type == 'image'){
       this.middleUrl = BackgroundSource.BackgroundSourcesPath + middleSrc.url;
-    else
+      this.middleVideoUrl = undefined;
+    } else{
       this.middleVideoUrl = BackgroundSource.BackgroundSourcesPath + middleSrc.url;
+      this.middleUrl = undefined;
+    }
 
-    if(rightSrc.type == 'jpg')
+    if(rightSrc.type == 'image'){
       this.rightUrl = BackgroundSource.BackgroundSourcesPath + rightSrc.url;
-    else
+      this.rightVideoUrl = undefined;
+    }else{
       this.rightVideoUrl = BackgroundSource.BackgroundSourcesPath + rightSrc.url;
+      this.rightUrl = undefined;
+    }
   }
 }
