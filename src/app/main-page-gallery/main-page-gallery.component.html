@@ -1,0 +1,33 @@
+<div class="content">
+  <div class="headline">
+    <h1>PORTFOLIO</h1>
+    <h2>Fabian Häubl</h2>
+  </div>
+
+  <div class="about-me">
+    <div class="chapter-headline">
+      <div class="line"></div>
+      <div class="chapter-title-box">
+        <h1 class="chapter-title">About Me</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="gallery">
+    <div class="chapter-headline">
+      <div class="line"></div>
+      <div class="chapter-title-box">
+        <h1 class="chapter-title">Gallery</h1>
+      </div>
+    </div>
+    <div class="row" *ngFor="let nill of getRow(); index as i">
+      <div class="cell" *ngFor="let pictureData of this.getPictureRow(i)" [style.background-image]="'url(' + pictureData.pictureURLs[0] + ')'">
+        <div class="info">
+          <h2 class="picture-title">{{pictureData.title}}</h2>
+        </div>
+        <!--<img [src]="pictureData.pictureURLs[0]" class="gallery-image">-->
+      </div>
+    </div>
+  </div>
+</div>
+

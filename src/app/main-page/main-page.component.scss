@@ -43,14 +43,26 @@
   right:0;
   z-index:0;
   overflow: hidden;
+  background-color: black;
+}
+
+.videos{
+  height: 100%;
+  width:100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 .pics{
   width: 70vw;
   height: 100vh;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-position: 50%;
   position:absolute;
   top: 0;
+  overflow: hidden;
 }
 
 .left-pic{

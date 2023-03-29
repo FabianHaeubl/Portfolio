@@ -19,13 +19,13 @@ import { BackgroundSource } from '../background-source';
         left: '-140vw'
       })),
       transition('middle => left', [
-        animate('2s')
+        animate('1s')
       ]),
       transition('left => middle', [
         animate('0s')
       ]),
       transition('middle => right', [
-        animate('2s')
+        animate('1s')
       ]),
       transition('right => middle', [
         animate('0s')
@@ -37,6 +37,9 @@ export class MainPageComponent implements OnInit {
 
   scrollLeft: boolean = false;
   scrollRight: boolean = false;
+  scrollPos: number = 0;
+  scrollEnd: boolean = true;
+  scrolled: boolean = false;
   leftUrl: string | undefined;
   middleUrl: string | undefined;
   rightUrl: string | undefined;
@@ -59,19 +62,39 @@ export class MainPageComponent implements OnInit {
   }
 
   galleryScroll(event: any): void{
-    if(this.scrollRight || this.scrollLeft)
+    //this.scrollEnd = false;
+    if(this.scrolled)
       return;
 
-      console.log("scroll event");
     if(event.deltaX > 0 || event.deltaY < 0){
       //left to right
       this.scrollRight = true;
       this.IncreaseBackgroundIterator();
+
     } else if(event.deltaX < 0 || event.deltaY > 0){
       //right to left
       this.scrollLeft = true;
       this.DecreaseBackgroundIterator();
     }
+
+    this.scrolled = true;
+    //this.scrollPos += event.deltaX + event.deltaY;
+
+    //wait for end of scroll
+    //this.scrollEnd = true;
+    /*setTimeout(() => {
+      if(this.scrollEnd){
+        this.endScroll();
+      }
+    }, 500);*/
+  }
+
+  startAnimation(){
+    this.scrollLeft = false;
+    this.scrollRight = false;
+  }
+
+  endScroll(){
 
   }
 
@@ -93,8 +116,6 @@ export class MainPageComponent implements OnInit {
   }
 
   resetBool(){
-    this.scrollRight = false;
-    this.scrollLeft = false;
     this.changeBackgrounds();
   }
 

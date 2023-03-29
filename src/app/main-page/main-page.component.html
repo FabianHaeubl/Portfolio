@@ -2,19 +2,25 @@
   <div class="start-page">
     <div class="gallery-scroll-hitbox" (wheel)="galleryScroll($event)"></div>
     <div class="gallery">
-      <div class="pictures" [@scroll]='scrollLeft ? "left" : scrollRight ? "right" : "middle"' (@scroll.done)="this.resetBool()">
-        <div class="pics left-pic" [style]="this.leftUrl ? 'background-image:url(' + this.leftUrl + ');' : ''" *ngIf="this.leftUrl"></div>
-        <video class="pics left-pic" controls autoplay muted loop *ngIf="this.leftVideoUrl">
-          <source [src]="this.leftVideoUrl" type="video/mp4">
-        </video>
-        <div class="pics middle-pic" [style]="this.middleUrl ? 'background-image:url(' + this.middleUrl + ');' : ''" *ngIf="this.middleUrl"></div>
-        <video class="pics middle-pic" controls autoplay muted loop *ngIf="this.middleVideoUrl">
-          <source [src]="this.middleVideoUrl" type="video/mp4">
-        </video>
-        <div class="pics right-pic" [style]="this.rightUrl ? 'background-image:url(' + this.rightUrl + ');' : ''" *ngIf="this.rightUrl"></div>
-        <video class="pics right-pic" controls autoplay muted loop *ngIf="this.rightVideoUrl">
-          <source [src]="this.rightVideoUrl" type="video/mp4">
-        </video>
+      <div class="pictures" [@scroll]='scrollLeft ? "left" : scrollRight ? "right" : "middle"' (@scroll.done)="this.resetBool()" (@scroll.start)="this.startAnimation()">
+        <div class="pics left-pic" [style]="this.leftUrl ? 'background-image:url(' + this.leftUrl + ');' : ''">
+          <video class="videos" autobuffer autoplay muted loop *ngIf="this.leftVideoUrl">
+            <source [src]="this.leftVideoUrl" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="pics middle-pic" [style]="this.middleUrl ? 'background-image:url(' + this.middleUrl + ');' : ''">
+          <video class="videos" autobuffer autoplay muted loop *ngIf="this.middleVideoUrl">
+            <source [src]="this.middleVideoUrl" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="pics right-pic" [style]="this.rightUrl ? 'background-image:url(' + this.rightUrl + ');' : ''">
+          <video class="videos" autobuffer autoplay muted loop *ngIf="this.rightVideoUrl">
+            <source [src]="this.rightVideoUrl" type="video/mp4">
+          </video>
+        </div>
+
       </div>
       <div class="scroll">
         <div class="scroll-points">
