@@ -1,8 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+@font-face {
+    font-family: Inconsolata;
+    src: url(assets/fonts/Inconsolata/Inconsolata-VariableFont.ttf);
+}
+
+@font-face {
+    font-family: Cinzel;
+    src: url(assets/fonts/Cinzel/Cinzel-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Titillium;
+    src: url(assets/fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Orbitron;
+    src: url(assets/fonts/Orbitron/Orbitron-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Arima;
+    src: url(assets/fonts/Arima/Arima-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Stick_No_Bills;
+    src: url(assets/fonts/Stick_No_Bills/StickNoBills-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Forum;
+    src: url(assets/fonts/Forum/Forum-Regular.ttf);
+}
+
 html, body { height: 100%; }
 
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+body { margin: 0; font-family: Inconsolata,Roboto, "Helvetica Neue", sans-serif; }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Inconsolata,Roboto, "Helvetica Neue", sans-serif; }

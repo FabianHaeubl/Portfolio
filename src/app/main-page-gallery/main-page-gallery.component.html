@@ -11,6 +11,13 @@
         <h1 class="chapter-title">About Me</h1>
       </div>
     </div>
+    <div class="about-me-text-container">
+      <p class="about-me-text">My name is Fabian Häubl. I am from Upper Austria, more precisely from the town of Kremsmünster.
+        I attended the department of media technology at the higher technical college in Leonding for 5 years and successfully graduated in the summer of 2022.
+        My hobbies are volleyball, programming and the creation of 3D Artworks. <!--Further more, I am very interested in the development of video games and everything that surrounds it.-->
+        The later two are combined in my affection for playing and creating video games.
+       Down below are some of the creations I made over the years. </p>
+    </div>
   </div>
 
   <div class="gallery">
@@ -20,14 +27,17 @@
         <h1 class="chapter-title">Gallery</h1>
       </div>
     </div>
-    <div class="row" *ngFor="let nill of getRow(); index as i">
-      <div class="cell" *ngFor="let pictureData of this.getPictureRow(i)" [style.background-image]="'url(' + pictureData.pictureURLs[0] + ')'">
-        <div class="info">
-          <h2 class="picture-title">{{pictureData.title}}</h2>
+    <div class="gallery-content">
+      <div class="row" *ngFor="let nill of getRow(); index as i">
+        <div class="cell" *ngFor="let pictureData of this.getPictureRow(i)" [style.background-image]="'url(' + pictureData.pictureURLs[0] + ')'">
+          <div class="info">
+            <h1 class="picture-title">{{pictureData.title}}</h1>
+          </div>
+          <!--<img [src]="pictureData.pictureURLs[0]" class="gallery-image">-->
         </div>
-        <!--<img [src]="pictureData.pictureURLs[0]" class="gallery-image">-->
       </div>
     </div>
+    
   </div>
 </div>
 

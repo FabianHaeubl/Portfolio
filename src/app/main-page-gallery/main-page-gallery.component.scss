@@ -1,6 +1,14 @@
+.gallery-content{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .cell{
-  width: 30vw;
-  height: 30vw;
+  width: 23vw;
+  height: 23vw;
   background-size:cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -27,8 +35,8 @@
 }
 
 .row{
-  width: 100%;
-  height: 32vw;
+  width: 80%;
+  height: 28vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -53,18 +61,19 @@
 }
 
 .info:hover .picture-title{
-  margin-left: 10%
+  margin-left: 10%;
 }
 
 .picture-title{
   color: white;
   margin-left: 2%;
-  font-size: 300%;
+  font-size: 3.5vw;
   transition: margin-left 1s;
   position: absolute;
   top: 50%;
   left: 0;
-  transform:translateY(-50%)
+  transform:translateY(-50%);
+  white-space: nowrap;
 }
 
 .gallery-image{
@@ -92,7 +101,7 @@
 }
 
 .headline h1{
-  font-size: 800%;
+  font-size: 1000%;
   margin-bottom: 10vh;
 }
 
@@ -135,6 +144,34 @@
 }
 
 .about-me{
-  height: 30vh;
+  height: fit-content;
 }
 
+.about-me-text{
+  width: 70%;
+  text-align: center;
+  font-size: 24px;
+  line-height: 35px;
+  height: 100%;
+}
+
+.about-me-text-container{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1{
+  font-family: Cinzel;
+}
+
+h2{
+  font-family: Forum;
+}
+
+p{
+  font-family: Forum;
+}

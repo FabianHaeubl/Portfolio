@@ -16,6 +16,8 @@ export class MainPageGalleryComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+
   getRow():Array<number>{
     return new Array(Math.ceil((Data.data.length - 1)/this.columns));
   }
