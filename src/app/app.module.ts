@@ -9,6 +9,7 @@ import { ContentComponent } from './content/content.component';
 import { CardComponent } from './card/card.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { MainPageGalleryComponent } from './main-page-gallery/main-page-gallery.component';
+import { DetailViewComponent } from './detail-view/detail-view.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MainPageGalleryComponent } from './main-page-gallery/main-page-gallery.
     ContentComponent,
     CardComponent,
     MainPageComponent,
-    MainPageGalleryComponent
+    MainPageGalleryComponent,
+    DetailViewComponent
   ],
   imports: [
     BrowserModule,
